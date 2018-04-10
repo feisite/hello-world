@@ -1,0 +1,13 @@
+#! /bin/csh -f
+
+xst -ifn sfi5.cmd -ofn sfi5.srp
+
+ngdbuild -sd ../Chipscope -sd ../Hardware_Testbench -uc sfi5_ml623_demo.ucf -p xc6vlx240t-1-ff1156 sfi5.ngc
+
+map -detail -timing -ignore_keep_hierarchy -p xc6vlx240t-1-ff1156 -ol high -xe c -w -o sfi5_map.ncd sfi5.ngd mapped.pcf
+
+par -ol high -w sfi5_map.ncd sfi5_par.ncd mapped.pcf
+
+trce -v 1000 -u 1000 -fastpaths -s -1 sfi5_par -tsi sfi5.tsi -o sfi5 mapped.pcf
+
+bitgen -w sfi5_par.ncd sfi5

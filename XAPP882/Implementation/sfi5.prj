@@ -1,0 +1,25 @@
+// SFI-5 Interface files
+`include "../Design/counter_64.v"
+`include "../Design/counter_32bit.v"
+`include "../Design/counter_128.v"
+`include "../Design/tx_sync.v"
+`include "../Design/sfi5_tx_deskew_channel.v"
+`include "../Design/sfi5_rx_data_sync.v"
+`include "../Design/sfi5_rx_frame_sync.v"
+`include "../Design/sfi5_rx_if_v6_16bit.v"
+`include "../Design/sfi5_rx_barrel_shifter_16bit.v"
+`include "../Design/sfi5_reset_tx.v"
+`include "../Design/sfi5_reset_rx.v"
+`include "../Design/gtx_wrapper_gtx.v"
+`include "../Design/gtx_wrapper.v"
+`include "../Design/sfi5_if_v6_16bit.v"
+
+// Hardware Testbench files
+`include "../Hardware_Testbench/prbs31_gen.v"
+`include "../Hardware_Testbench/sfi5_ml623_demo.v"
+
+// ChipScope Pro Analyzer files
+`include "../Chipscope/chipscope_ila.v"
+`include "../Chipscope/chipscope_icon.v"
+`include "../Chipscope/chipscope_vio.v"
+

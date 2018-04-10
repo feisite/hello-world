@@ -1,0 +1,126 @@
+NET sfi5_if_v6_16bit_0/txrefclk_2_gtx   PERIOD = 6.4 ns;
+NET sfi5_if_v6_16bit_0/txrefclk_2_gtx_2 PERIOD = 6.4 ns;
+
+##SFI-5 Transmit Signals
+NET "TXDATA_P<0>"		LOC = "AP1";
+NET "TXDATA_N<0>"		LOC = "AP2";
+NET "TXDATA_P<1>"		LOC = "AN3";
+NET "TXDATA_N<1>"		LOC = "AN4";
+NET "TXDATA_P<2>"		LOC = "AM1";
+NET "TXDATA_N<2>"		LOC = "AM2";
+NET "TXDATA_P<3>"		LOC = "AK1";
+NET "TXDATA_N<3>"		LOC = "AK2";
+NET "TXDATA_P<4>"		LOC = "AH1";
+NET "TXDATA_N<4>"		LOC = "AH2";
+NET "TXDATA_P<5>"		LOC = "AF1";
+NET "TXDATA_N<5>"		LOC = "AF2";
+NET "TXDATA_P<6>"		LOC = "AD1";
+NET "TXDATA_N<6>"		LOC = "AD2";
+NET "TXDATA_P<7>"		LOC = "AB1";
+NET "TXDATA_N<7>"		LOC = "AB2";
+NET "TXDATA_P<8>"		LOC = "Y1";
+NET "TXDATA_N<8>"		LOC = "Y2";
+NET "TXDATA_P<9>"		LOC = "V1";
+NET "TXDATA_N<9>"		LOC = "V2";
+NET "TXDATA_P<10>"		LOC = "T1";
+NET "TXDATA_N<10>"		LOC = "T2";
+NET "TXDATA_P<11>"		LOC = "P1";
+NET "TXDATA_N<11>"		LOC = "P2";
+NET "TXDATA_P<12>"		LOC = "M1";
+NET "TXDATA_N<12>"		LOC = "M2";
+NET "TXDATA_P<13>"		LOC = "K1";
+NET "TXDATA_N<13>"		LOC = "K2";
+NET "TXDATA_P<14>"		LOC = "H1";
+NET "TXDATA_N<14>"		LOC = "H2";
+NET "TXDATA_P<15>"		LOC = "F1";
+NET "TXDATA_N<15>"		LOC = "F2";
+NET "TXDSC_P"			LOC = "D1";
+NET "TXDSC_N"			LOC = "D2";
+NET "TXDCK<0>"			LOC = "B31";	# CLK_DIFF_A-P
+NET "TXDCK<1>"			LOC = "A31";	# CLK_DIFF_A-N
+#
+##SFI-5 Receive Signals
+NET "RXDATA_P<0>"		LOC = "AP5";
+NET "RXDATA_N<0>"		LOC = "AP6";
+NET "RXDATA_P<1>"		LOC = "AM5";
+NET "RXDATA_N<1>"		LOC = "AM6";
+NET "RXDATA_P<2>"		LOC = "AL3";
+NET "RXDATA_N<2>"		LOC = "AL4";
+NET "RXDATA_P<3>"		LOC = "AJ3";
+NET "RXDATA_N<3>"		LOC = "AJ4";
+NET "RXDATA_P<4>"		LOC = "AG3";
+NET "RXDATA_N<4>"		LOC = "AG4";
+NET "RXDATA_P<5>"		LOC = "AF5";
+NET "RXDATA_N<5>"		LOC = "AF6";
+NET "RXDATA_P<6>"		LOC = "AE3";
+NET "RXDATA_N<6>"		LOC = "AE4";
+NET "RXDATA_P<7>"		LOC = "AC3";
+NET "RXDATA_N<7>"		LOC = "AC4";
+NET "RXDATA_P<8>"		LOC = "AA3";
+NET "RXDATA_N<8>"		LOC = "AA4";
+NET "RXDATA_P<9>"		LOC = "W3";
+NET "RXDATA_N<9>"		LOC = "W4";
+NET "RXDATA_P<10>"		LOC = "U3";
+NET "RXDATA_N<10>"		LOC = "U4";
+NET "RXDATA_P<11>"		LOC = "R3";
+NET "RXDATA_N<11>"		LOC = "R4";
+NET "RXDATA_P<12>"		LOC = "N3";
+NET "RXDATA_N<12>"		LOC = "N4";
+NET "RXDATA_P<13>"		LOC = "L3";
+NET "RXDATA_N<13>"		LOC = "L4";
+NET "RXDATA_P<14>"		LOC = "K5";
+NET "RXDATA_N<14>"		LOC = "K6";
+NET "RXDATA_P<15>"		LOC = "J3";
+NET "RXDATA_N<15>"		LOC = "J4";
+NET "RXDSC_P"			LOC = "G3";
+NET "RXDSC_N"			LOC = "G4";
+
+#
+## Push Button Switches
+NET "PB_SW1"			LOC = "E31";
+
+#
+## LED's
+NET "LED<1>"			LOC = "M15";
+NET "LED<2>"			LOC = "M16";
+NET "LED<3>"			LOC = "F15";
+NET "LED<4>"			LOC = "G15";
+NET "LED<5>"			LOC = "B15";
+NET "LED<6>"			LOC = "A15";
+NET "LED<7>"			LOC = "G16";
+NET "LED<8>"			LOC = "F16";
+
+####################### GTX reference clock constraints #######################
+NET "TXREFCK<0>"    LOC = "AD6";
+NET "TXREFCK<1>"    LOC = "AD5";
+NET "TXREFCK_2<0>"  LOC = "P6";
+NET "TXREFCK_2<1>"  LOC = "P5";
+
+###### GTX Location constraint #################################################
+INST sfi5_if_v6_16bit_0/gtx_wrapper_i/gtx0_gtx_wrapper_i/gtxe1_i LOC=GTXE1_X0Y0;
+INST sfi5_if_v6_16bit_0/gtx_wrapper_i/gtx1_gtx_wrapper_i/gtxe1_i LOC=GTXE1_X0Y1;
+INST sfi5_if_v6_16bit_0/gtx_wrapper_i/gtx2_gtx_wrapper_i/gtxe1_i LOC=GTXE1_X0Y2;
+INST sfi5_if_v6_16bit_0/gtx_wrapper_i/gtx3_gtx_wrapper_i/gtxe1_i LOC=GTXE1_X0Y3;
+INST sfi5_if_v6_16bit_0/gtx_wrapper_i/gtx4_gtx_wrapper_i/gtxe1_i LOC=GTXE1_X0Y4;
+INST sfi5_if_v6_16bit_0/gtx_wrapper_i/gtx5_gtx_wrapper_i/gtxe1_i LOC=GTXE1_X0Y5;
+INST sfi5_if_v6_16bit_0/gtx_wrapper_i/gtx6_gtx_wrapper_i/gtxe1_i LOC=GTXE1_X0Y6;
+INST sfi5_if_v6_16bit_0/gtx_wrapper_i/gtx7_gtx_wrapper_i/gtxe1_i LOC=GTXE1_X0Y7;
+INST sfi5_if_v6_16bit_0/gtx_wrapper_i/gtx8_gtx_wrapper_i/gtxe1_i LOC=GTXE1_X0Y8;
+INST sfi5_if_v6_16bit_0/gtx_wrapper_i/gtx9_gtx_wrapper_i/gtxe1_i LOC=GTXE1_X0Y9;
+INST sfi5_if_v6_16bit_0/gtx_wrapper_i/gtx10_gtx_wrapper_i/gtxe1_i LOC=GTXE1_X0Y10;
+INST sfi5_if_v6_16bit_0/gtx_wrapper_i/gtx11_gtx_wrapper_i/gtxe1_i LOC=GTXE1_X0Y11;
+INST sfi5_if_v6_16bit_0/gtx_wrapper_i/gtx12_gtx_wrapper_i/gtxe1_i LOC=GTXE1_X0Y12;
+INST sfi5_if_v6_16bit_0/gtx_wrapper_i/gtx13_gtx_wrapper_i/gtxe1_i LOC=GTXE1_X0Y13;
+INST sfi5_if_v6_16bit_0/gtx_wrapper_i/gtx14_gtx_wrapper_i/gtxe1_i LOC=GTXE1_X0Y14;
+INST sfi5_if_v6_16bit_0/gtx_wrapper_i/gtx15_gtx_wrapper_i/gtxe1_i LOC=GTXE1_X0Y15;
+INST sfi5_if_v6_16bit_0/gtx_wrapper_i/gtx16_gtx_wrapper_i/gtxe1_i LOC=GTXE1_X0Y16;
+
+
+#
+## Timing constraints
+NET "sfi5_if_v6_16bit_0/txusrclk2" TNM_NET = "txusrclk2";
+TIMESPEC "TS_txusrclk2" = PERIOD "txusrclk2" 6.4 ns HIGH 50 %;
+#
+NET "sfi5_if_v6_16bit_0/rxusrclk2" TNM_NET = "rxusrclk2";
+TIMESPEC "TS_rxusrclk2" = PERIOD "rxusrclk2" 6.4 ns HIGH 50 %;
+

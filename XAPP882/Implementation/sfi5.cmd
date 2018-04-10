@@ -1,0 +1,13 @@
+run 
+-p xc6vlx240t-1-ff1156
+-ifn sfi5.prj 
+-ifmt VERILOG  
+-ofn sfi5.ngc  
+-top sfi5_ml623_demo
+-keep_hierarchy SOFT
+-opt_mode  SPEED
+-rtlview yes
+-iobuf YES
+-glob_opt AllClockNets
+-sd ../Hardware_Testbench
+-sd ../Chipscope
